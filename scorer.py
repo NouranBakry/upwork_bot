@@ -42,7 +42,7 @@ def score_job(job: Job) -> ScoredJob | None:
     """Send job to Claude for scoring. Returns None if API call fails."""
     try:
         response = client.messages.create(
-            model="claude-sonnet-4-20250514",
+            model="claude-haiku-4-5-20251001",
             max_tokens=400,
             system=SYSTEM_PROMPT,
             messages=[{"role": "user", "content": job.raw}]
